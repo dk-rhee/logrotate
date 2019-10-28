@@ -3,7 +3,7 @@
 import configparser
 from datetime import datetime, timedelta
 import os
-import schedule # pip install schedule
+import schedule
 import subprocess
 import time
 
@@ -49,7 +49,7 @@ def do_job():
 
 
 def main():
-    schedule.every().day.at("00:00").do(job)
+    schedule.every().day.at("00:00").do(do_job)
 
     while True:
         schedule.run_pending()
